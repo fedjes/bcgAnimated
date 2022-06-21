@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(18, 4, 34);
+}
+
+.bcg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bols {
+position: relative;
+display: flex;
+}
+
+.bols span {
+position: relative;
+width: 20px;
+height: 20px;
+background: rgb(63, 140, 192);
+margin: 0 5px;
+border-radius: 50%;
+box-shadow: 0 0 0 10px rgb(31, 120, 192),
+0 0 40px rgb(63, 140, 192),
+0 0 90px rgb(63, 140, 192);
+animation: animate 15s linear infinite;
+animation-duration: calc(140s / var(--i));
+}
+
+.bols span:nth-child(even) {
+    background: rgb(218, 37, 235);
+    box-shadow: 0 0 0 10px rgb(204, 69, 216),
+    0 0 40px rgb(218, 37, 235),
+    0 0 90px rgb(218, 37, 235);  
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
